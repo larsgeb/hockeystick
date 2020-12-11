@@ -1,4 +1,4 @@
-# Hockeyplot
+# Hockeystick
 
 Sometimes in optimization, we want to check if our gradients are correct. One way to do
 this is to do a finite difference test. This small code is how one would implement such
