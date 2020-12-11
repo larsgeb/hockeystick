@@ -64,7 +64,7 @@ x0, x1, y0, y1 = -5, 5, -5, 5
 misfit_initial = function_to_hockey(m_initial)
 gradient_initial = gradient_to_hockey(m_initial)
 
-epsilons = np.logspace(-25, 5, 31)
+epsilons = np.logspace(-25, 5, 3001)
 actual_misfits = np.empty_like(epsilons)
 predicted_misfits = np.empty_like(epsilons)
 relative_errors = np.empty_like(epsilons)
@@ -88,7 +88,7 @@ relative_misfit_errors = (
 )
 
 
-plt.semilogy(relative_misfit_errors)
+plt.loglog(epsilons, relative_misfit_errors)
 plt.ylabel("relative error in misfit prediction")
 plt.xlabel("epsilon")
 plt.show()
